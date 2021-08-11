@@ -1,10 +1,11 @@
 {
-  "name": "discord_bot_for_fun",
-  "version": "1.0.0",
-  "description": "hi",
+  "name": "Discord bot for fun",
+  "version": "0.1",
+  "description": "A discord bot I wrote for fun and for practicing my coding skills",
   "main": "main.js",
   "dependencies": {
     "discord.js": "^13.0.1",
+    "mathjs": "^9.4.4",
     "node.js": "^0.0.1-security"
   },
   "devDependencies": {},
