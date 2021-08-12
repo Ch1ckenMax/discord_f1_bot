@@ -45,7 +45,7 @@ fs.readdir("./commands", (err, commandsList) => {
                             Routes.applicationGuildCommands(bot_info.bot_id, GUILD_ID),
                             { body: commands },
                         );
-                        console.log('Successfully reloaded application (/) commands for test guild.');
+                        console.log('Successfully reloaded application (/) commands for test guild ' + GUILD_ID + '.');
                     }
 
                 } catch (error) {
