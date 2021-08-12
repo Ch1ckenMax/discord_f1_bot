@@ -57,7 +57,6 @@ fs.readdir("./commands", (err, commandsList) => {
         loadSlash(false, bot_info.guild_id); //Load slash commands to the guild specified by guild_id for testing
         loadSlash(true, null); //Load slash commands to global
 
-
     }
         
 });
