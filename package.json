@@ -4,11 +4,13 @@
   "description": "A discord bot I wrote for fun and for practicing my coding skills",
   "main": "main.js",
   "dependencies": {
+    "@discordjs/builders": "^0.5.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.22.0",
     "discord.js": "^13.0.1",
     "mathjs": "^9.4.4",
     "node.js": "^0.0.1-security"
   },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
