@@ -17,19 +17,14 @@ async function fetch(url){
 
 }
 
-//Returns an array of objects that contains the f1 driver info in the order of latest f1 standings
-async function getLatestDriverStanding(){
-    let dataInJSON = await fetch("http://ergast.com/api/f1/current/driverStandings.json");
-
-    if(dataInJSON.statusText == "OK"){
-        let DriverList = dataInJSON.data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
-        console.log(DriverList);
-        return DriverList;
-    }
-    else
-        return null;
+async function testingShit(){
+    let dataInJSON = await fetch("http://ergast.com/api/f1/current/constructorStandings.json");
+    //let driverList = dataInJSON.data.MRData.StandingsTable.StandingsLists[0].season;
+    console.log(dataInJSON.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings);
 }
 
+testingShit();
+
 module.exports = {
-    getLatestDriverStanding
+    fetch
 }

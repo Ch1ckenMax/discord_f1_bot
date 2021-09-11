@@ -8,12 +8,14 @@ module.exports = {
 		.setDescription("Shows current f1 driver standing."),
 	async execute(interaction) { //Need to wait for server so async here
 		interaction.deferReply();
-		let driverList = await f1_info.getLatestDriverStanding();
-		let replyString = "";
-		if(driverList != null){
-			replyString = "**F1 Current Driver Standings:**";
+		let dataInJSON = await f1_info.fetch("http://ergast.com/api/f1/current/driverStandings.json")
+		let replyString = ""; //It takes more than 3 seconds so it is needed
+		if(dataInJSON.statusText == "OK"){
+			let driverList = dataInJSON.data.MRData.StandingsTable.StandingsLists[0].DriverStandings;
+			let year = dataInJSON.data.MRData.StandingsTable.StandingsLists[0].season;
+			replyString = "**F1 "+year+" Current Driver Standings:**";
 			for(let eachDriver of driverList){
-				replyString += "\n **" + eachDriver.position+".** "+flag(eachDriver.Driver.nationality)+" "+eachDriver.Driver.givenName+" "+eachDriver.Driver.familyName+" "+eachDriver.Constructors[0].name+" \n"+eachDriver.points+"pts"+'\n';
+				replyString += "\n **" + eachDriver.position+".** "+flag(eachDriver.Driver.nationality)+" "+eachDriver.Driver.givenName+" "+eachDriver.Driver.familyName+" "+eachDriver.Constructors[0].name+" \n"+eachDriver.points+"pts" + "\n";
 			}
 		}
 		else{
