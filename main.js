@@ -27,7 +27,8 @@ fs.readdir("./commands", (err, commandsList) => {
 
         const rest = new REST({ version: '9' }).setToken(bot_info.token);
         
-        //Function to load slash commands to specific servers without delays?
+        //Function to load slash commands to server
+        //Usage : "removeSlash(true, null)" if add to global, "removeSlash(false, guild_id)" if add to a specific test server
         function loadSlash(global, GUILD_ID){
             (async () => {
                 try {
@@ -53,9 +54,38 @@ fs.readdir("./commands", (err, commandsList) => {
                 }
             })(); 
         }
+        
+        //Function to remove slash commands from server
+        //Usage : "removeSlash(true, null)" if remove from global, "removeSlash(false, guild_id)" if remove from a specific test server
+        function removeSlash(global, GUILD_ID){
+            (async () => {
+                try {
+                    if(global){
+                        console.log('Started deleting application (/) commands for global.');
+                        await rest.put(
+                            Routes.applicationCommands(bot_info.bot_id),
+                            { body: [] },
+                        );
+                        console.log('Successfully deleted application (/) commands for global.');
+                    }
+                    else{
+                        console.log('Started deleting application (/) commands for test guild.');
+                        await rest.put(
+                            Routes.applicationGuildCommands(bot_info.bot_id, GUILD_ID),
+                            { body: [] },
+                        );
+                        console.log('Successfully deleted application (/) commands for test guild ' + GUILD_ID + '.');
+                    }
 
-        loadSlash(false, bot_info.guild_id); //Load slash commands to the guild specified by guild_id for testing
-        loadSlash(true, null); //Load slash commands to global
+                } catch (error) {
+                    console.error(error);
+                }
+            })(); 
+        }
+
+        //loadSlash(false, bot_info.guild_id); //Load slash commands to the guild specified by guild_id for testing
+        //loadSlash(true, null); //Load slash commands to global
+        //removeSlash(true, null);
 
     }
         
