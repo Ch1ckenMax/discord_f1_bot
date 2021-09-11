@@ -10,3 +10,4 @@ move command loader/remover to separate file? use of oop for this?<br>
 more f1 info(last race results etc.)<br>
 reminder<br>
 random generator<br>
+vettel petting simulator
