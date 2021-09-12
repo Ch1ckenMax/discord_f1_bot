@@ -11,3 +11,4 @@ more f1 info(last race results etc.)<br>
 reminder<br>
 random generator<br>
 vettel petting simulator
+command line
