@@ -10,6 +10,6 @@ move command loader/remover to separate file? use of oop for this?<br>
 more f1 info(last race results etc.)<br>
 reminder<br>
 random generator<br>
-vettel petting simulator
-command line
+vettel petting simulator<br>
+command line<br>
 type script because the project now looks like a fucking turd
