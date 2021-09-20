@@ -12,3 +12,4 @@ reminder<br>
 random generator<br>
 vettel petting simulator
 command line
+type script because the project now looks like a fucking turd
