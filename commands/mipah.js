@@ -5,6 +5,6 @@ module.exports = {
 		.setName("mipah")
 		.setDescription('command for testing'),
 	execute(interaction) {
-		interaction.reply('Mipah!');
+		interaction.reply("Mipah!");
 	},
 };
