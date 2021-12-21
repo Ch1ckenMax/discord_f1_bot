@@ -8,7 +8,7 @@ UNDER CONSTRUCTION
 # To-do list
 - move command loader/remover to separate file? use of oop for this?<br>
 - more f1 info(last race results etc.)<br>
-- cache for f1 info? (api server is so slowww)<br>
+- cache for f1 info? (api server is so slowww) DONE.<br>
 - reminder<br>
 - random generator<br>
 - vettel petting simulator<br>
