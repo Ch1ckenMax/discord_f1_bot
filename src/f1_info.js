@@ -17,14 +17,6 @@ async function fetch(url){
 
 }
 
-async function testingShit(){
-    let dataInJSON = await fetch("http://ergast.com/api/f1/current/constructorStandings.json");
-    //let driverList = dataInJSON.data.MRData.StandingsTable.StandingsLists[0].season;
-    console.log(dataInJSON.data.MRData.StandingsTable.StandingsLists[0].ConstructorStandings);
-}
-
-testingShit();
-
 module.exports = {
     fetch
 }

@@ -1,5 +1,5 @@
 //Load modules and src files
-const bot_info = require("./bot_info.js");
+const bot_info = require("./src/bot_info.js");
 const { Client, Intents } = require("discord.js");
 const fs = require("fs");
 const { REST } = require('@discordjs/rest');
