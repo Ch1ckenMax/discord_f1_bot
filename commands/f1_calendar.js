@@ -24,7 +24,6 @@ module.exports = {
                 //Find the index of the races remaining
                 let nextRaceIndex = search(races,currentTime,function(race,currentTime){let raceTime = new Date(race.date+'T'+race.time); return raceTime - currentTime;}); //races is a reference to an object(an array), so no need to initialize an array again just for passing it to the search function.
                 if(nextRaceIndex < 0) nextRaceIndex = ~nextRaceIndex; //Flip it if the time is not exactly the race time
-                console.log(races[3]);
 
                 replyString = "**F1 "+year+" Calendar of the Remaining Races:**";
                 if(nextRaceIndex == races.length){ //No races remaining
