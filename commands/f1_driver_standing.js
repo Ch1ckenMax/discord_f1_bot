@@ -23,6 +23,7 @@ module.exports = {
 					replyString += "\n **" + eachDriver.position+".** "+flag(eachDriver.Driver.nationality)+" "+eachDriver.Driver.givenName+" "+eachDriver.Driver.familyName+" "+eachDriver.Driver.permanentNumber+" "+eachDriver.Constructors[0].name+" - "+eachDriver.points+"pts";
 				}
 				infoCache.information = replyString;
+				infoCache.setCacheTime();
 			}
 			else{
 				replyString = "Error :(";

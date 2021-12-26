@@ -23,6 +23,7 @@ module.exports = {
 					replyString += "\n **" + eachTeam.position+".** "+flag(eachTeam.Constructor.nationality)+" "+eachTeam.Constructor.name+" - "+eachTeam.points+"pts";
 				}
 				infoCache.information = replyString;
+				infoCache.setCacheTime();
 			}
 			else{
 				replyString = "Error :(";

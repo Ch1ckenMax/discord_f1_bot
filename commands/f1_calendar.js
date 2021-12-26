@@ -35,6 +35,7 @@ module.exports = {
                     }
                 }
 				infoCache.information = replyString;
+                infoCache.setCacheTime();
 			}
 			else{
 				replyString = "Error :(";

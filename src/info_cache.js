@@ -14,12 +14,13 @@ module.exports = class InfoCache{
     //The information to be stored. No special data validation needed so no need to use getter/setter here.
     information = NaN;
 
-    requiresRetrieval(currentTime){ //Check if retrieval from API is needed. Returns a boolean value.
-        if(this.#cacheTime == 0){ //First request
-            this.#cacheTime = currentTime;
-            return true;
-        }
+    setCacheTime(){
+        this.#cacheTime = Date.now();
+    }
 
+    requiresRetrieval(currentTime){ //Check if retrieval from API is needed. Returns a boolean value.
+        if(this.#cacheTime == 0) //First request
+            return true;
         //Subsequent requests. Check time
         return (currentTime - this.#cacheTime > this.#storeDuration);
     }
