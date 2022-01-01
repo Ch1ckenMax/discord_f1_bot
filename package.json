@@ -1,6 +1,6 @@
 {
   "name": "discord_bot_for_fun",
-  "version": "0.1",
+  "version": "1.0",
   "description": "A discord bot I wrote for fun and for practicing my coding skills",
   "main": "main.js",
   "dependencies": {
