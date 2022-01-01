@@ -23,8 +23,9 @@ module.exports = {
 	async execute(interaction) { //Need to wait for server so async here
 		let replyString = "";
 		if(infoCache.requiresRetrieval(Date.now())){ //Retrieve from API
+            let year = (new Date).getFullYear();
 			await interaction.deferReply(); //function should WAIT until the defer reply is completed. So, await is needed.
-			let dataInJSON = await F1_info.fetch("http://ergast.com/api/f1/current.json");
+			let dataInJSON = await F1_info.fetch("http://ergast.com/api/f1/"+year+".json");
 			if(dataInJSON.statusText == "OK"){
                 let races = dataInJSON.data.MRData.RaceTable.Races;
                 let currentTime = Date.now();
