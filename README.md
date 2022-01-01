@@ -13,7 +13,8 @@ Yet to be done<BR>
 - random generator<br>
 - vettel petting simulator<br>
 - command line<br>
-- type script
+- add restrictor to f1_info.js to avoid violation of terms of conditions of API(it will eventually become theortically possible in the future when more commands are added) <br>
+- type script (I think its too late at this point lol) <br>
   
 Done<BR>
 - cache for f1 info? (api server is so slowww)<br>
