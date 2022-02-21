@@ -1,6 +1,7 @@
 # Introduction
 A discord bot that retrieves formula 1 information from the <a href="http://ergast.com/mrd/">ergast api</a> and send it to the discord servers.<br>
-Runs on Node.js using <a href="https://discord.js.org/">discord.js</a> module.
+Runs on Node.js using <a href="https://discord.js.org/">discord.js</a> module.<BR>
+Just a little side project to practice coding and to make my and my friends' life slightly more convenient :).
 
 # Functions & Features
 1. Information of the current formula 1 season. (Time til the next race, current driver/constructor standings, calendar of current season etc.)
