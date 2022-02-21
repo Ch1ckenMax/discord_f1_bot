@@ -9,7 +9,7 @@ Runs on Node.js using <a href="https://discord.js.org/">discord.js</a> module.
 
 # Setup
 <h2>Initial setup</h2>
-1. Create a text file named ``bot_info.js`` under ``src`` folder, fill the text file as below
+1. Create a text file named bot_info.js under src folder, fill the text file as below
 
 ```
 module.exports = {
@@ -23,9 +23,9 @@ Replace TOKEN, BOT_ID according to your bot's information. Replace GUILD_ID acco
 2. Download node.js and run the bot by typing ``node main.js`` in the console.
 
 <h2>Enabling & disabling commands</h2>
-Before you can use the commands of the bot, the commands must first be loaded from the bot's source code to discord ONCE.<BR>
-To enable the commands, Use the functions located at line 86,87 of ``main.js`` file.<BR>
-Line 86 is for enabling commands in the test server specificed by ``GUILD_ID``.<BR>
-Line 87 is for enalbing commands for all servers (Note that it takes 1 hour to load the commands to all servers).<BR>
-Line 88 is for disabling all commands.<BR>
-These command loading operations are toggle. After each change to the source code of the commands or the first time you run the bot, you can comment it by adding ``\\`` to prevent it from loading again unnecessarily when you restart the bot.
+Before you can use the commands of the bot, the commands must first be loaded from the bot's source code to discord ONCE.<BR><BR>
+To enable the commands, Use the functions located at line 86,87 of main.js file.<BR>
+- Line 86 is for enabling commands in the test server specificed by GUILD_ID.<BR>
+- Line 87 is for enalbing commands for all servers (Note that it takes 1 hour to load the commands to all servers).<BR>
+- Line 88 is for disabling all commands.<BR><BR>
+These command loading operations are toggle. After each change to the source code of the commands or the first time you run the bot, you can comment it by adding \\ to prevent it from loading again unnecessarily when you restart the bot.
