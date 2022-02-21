@@ -25,7 +25,7 @@ Replace TOKEN, BOT_ID according to your bot's information. Replace GUILD_ID acco
 
 <h2>Enabling & disabling commands</h2>
 Before you can use the commands of the bot, the commands must first be loaded from the bot's source code to discord ONCE.<BR><BR>
-To enable the commands, Use the functions located at line 86,87 of main.js file.<BR>
+To enable the commands, Use the functions located at line 86,87,88 of main.js file.<BR>
 - Line 86 is for enabling commands in the test server specificed by GUILD_ID.<BR>
 - Line 87 is for enalbing commands for all servers (Note that it takes 1 hour to load the commands to all servers).<BR>
 - Line 88 is for disabling all commands.<BR><BR>
